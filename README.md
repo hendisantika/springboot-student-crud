@@ -37,4 +37,4 @@ mvn clean spring-boot:run
 ![Add Student](img/student.png "Add Student")
 
 
-An example can be found here: https://student-demo.herokuapp.com/
+An example can be found here: https://students-demo.herokuapp.com/
