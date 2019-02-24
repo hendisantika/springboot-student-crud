@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Update Student</title>
+    <link href="/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="/main.css" rel="stylesheet"></link>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/allstudents">Students</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="/addstudent">Add Student</a></li>
+                <li><a href="/addguide">Add Guide</a></li>
+                <li><a href="/addsubject">Add Subject</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<form method="post" th:object="${student}">
+    <table>
+        <!-- <span
+            th:text="${'Student: ' + student.name + ' , Guide: ' + student.guide.name}" />-->
+        <tr>
+            <td><br>Change Guide to:</br> <select class="form-control"
+                                                  th:field="*{guide}">
+                <option th:each="guide : ${guides}" th:text="${guide}"
+                        th:value="${guide.id}"></option>
+
+            </select></td>
+        </tr>
+
+        <tr>
+            <td>Add or Remove Subjects</td>
+
+            <td><br></br>
+                <li th:each="subject : ${subjects}"><input th:field="*{subject}"
+                                                           th:text="${subject}" th:value="${subject.id}"
+                                                           type="checkbox"/></li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
