@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>All Students</title>
+    <link href="/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="/main.css" rel="stylesheet"></link>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/allstudents">Students</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="/addstudent">Add Student</a></li>
+                <li><a href="/addguide">Add Guide</a></li>
+                <li><a href="/addsubject">Add Subject</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<table>
+    <tr>
+        <th>Student</th>
+        <th>Guide</th>
+        <th>Subjects</th>
+
+    </tr>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.name}">Onions</td>
+        <td th:text="${student.guide}">2.41</td>
+        <td th:text="${student.subject}">yes</td>
+        <td><a th:href="@{students/__${student.id}__/update}"
+               th:text="Update">1</a></td>
+        <td><a th:href="@{students/__${student.id}__/delete}"
+               th:text="Delete">1</a></td>
+
+    </tr>
+
+</table>
+
+
+</body>
+</html>
