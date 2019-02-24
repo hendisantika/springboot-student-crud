@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Application Demo</title>
+
+    <!-- Main style sheet -->
+    <link href="../../static/css/main.css" media="screen" rel="stylesheet" th:href="@{/css/main.css}"/>
+
+    <!-- Bootstrap 3 -->
+    <link href="../../static/css/bootstrap.min.css" media="screen" rel="stylesheet"
+          th:href="@{/css/bootstrap.min.css}"/>
+
+</head>
+
+<body>
+
+
+<div class="container">
+    <nav class="navbar navbar-expand-sm bg-primary navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h3>Welcome to the Spring Boot + Thymeleaf + Heroku template</h3>
+
+    <p>
+        This template has been designed to be used in conjunction with <a
+            href="https://jhipster.github.io/">JHipster</a> to enable rapid development of Spring Boot +
+        Thymeleaf applications that are fully deployable to Heroku.
+    </p>
+    <br/>
+
+    <h3>Technology Stack</h3>
+    <ul>
+        <li>Spring Boot, no-xml Spring MVC 4 web application for Servlet 3.0 environment</li>
+        <li>Thymeleaf templates with added Joda Time &amp; Spring Security Dialects</li>
+        <li>Heroku fully cloud deployable</li>
+        <li>JPA 2.0 (Spring Data JPA/Hibernate)</li>
+        <li>Database (Liquibase/PostgreSQL/H2 embedded/HikariCP)</li>
+        <li>Testing (JUnit/Mockito/MockMVC/AssertJ/Hamcrest)</li>
+        <li>Java 8, Spring Security 3.2, Maven 3, SLF4J, Logback, Bootstrap 3.3.4, jQuery 1.11.2, i18n, etc</li>
+    </ul>
+    <br/>
+</div>
+</body>
+</html>

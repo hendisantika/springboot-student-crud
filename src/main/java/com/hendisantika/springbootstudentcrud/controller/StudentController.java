@@ -70,5 +70,12 @@ public class StudentController {
         return "allstudents";
     }
 
+    @GetMapping("/test")
+    public String index(ModelMap model) {
+        model.put("students", student.findAll());
+        model.put("subjects", subjectRepository.findAll());
+        return "index";
+    }
+
 
 }
