@@ -2,26 +2,32 @@
 <html>
 <head>
     <meta charset="UTF-8"></meta>
-    <title>Add Subject</title>
-    <link href="/bootstrap.min.css" rel="stylesheet"></link>
-    <link href="/main.css" rel="stylesheet"></link>
+    <title>Update Data Students</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/css/main.css" rel="stylesheet"/>
 </head>
 <body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/allstudents">Students</a>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/addstudent">Add Student</a></li>
-                <li><a href="/addguide">Add Guide</a></li>
-                <li><a href="/addsubject">Add Subject</a></li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
+<div class="container">
+    <nav class="navbar navbar-expand-sm bg-primary navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/allstudents">All Students</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/addstudent">Add Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/addguide">Add Guide</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/addsubject">Add Subject</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
 
 <form method="post" th:object="${student}">
     <table>
@@ -40,6 +46,6 @@
         </tr>
     </table>
 </form>
-
+</div>
 </body>
 </html>
