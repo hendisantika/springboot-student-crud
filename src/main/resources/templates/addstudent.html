@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Add Subject</title>
+    <link href="/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="/main.css" rel="stylesheet"></link>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/allstudents">Students</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="/addstudent">Add Student</a></li>
+                <li><a href="/addguide">Add Guide</a></li>
+                <li><a href="/addsubject">Add Subject</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<form method="post" th:action="@{/addstudent}" th:object="${student}">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input th:field="*{name}" type="text"/></td>
+            <td th:errors="*{name}" th:if="${#fields.hasErrors('name')}">Name
+                Error
+            </td>
+        </tr>
+        <tr>
+            <td>Guide</td>
+            <td><select class="form-control" th:field="*{guide}">
+                <option th:each="guide : ${guides}" th:text="${guide}"
+                        th:value="${guide.id}"></option>
+
+            </select></td>
+        </tr>
+
+        <tr>
+            <td>Subjects</td>
+
+            <td><br></br>
+                <li th:each="subject : ${subjects}"><input th:field="*{subject}"
+                                                           th:text="${subject}" th:value="${subject.id}"
+                                                           type="checkbox"/></li>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
