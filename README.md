@@ -8,4 +8,33 @@ The project uses Spring Boot, Spring Data JPA, and Thymeleaf. The project is usi
 
 To run the project, clone or download it, and then go to the directory/student folder (where the mvnw file is) and run mvn spring-boot:run or just import the program into your IDE.
 
+#### Clone the project
+```
+git clone https://github.com/hendisantika/springboot-student-crud.git
+```
+
+```
+mvn clean spring-boot:run
+```
+
+
+#### Screen shot
+
+##### Index Page
+
+![Index Page](img/index.png "Index page")
+
+##### Add Guide
+
+![Add Guide](img/guide.png "Add Guide")
+
+##### Add Subject
+
+![Add Subject](img/subject.png "Add Subject")
+
+##### Add Student
+
+![Add Student](img/student.png "Add Student")
+
+
 An example can be found here: https://student-demo.herokuapp.com/
