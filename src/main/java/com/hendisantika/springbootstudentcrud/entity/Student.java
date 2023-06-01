@@ -1,6 +1,7 @@
 package com.hendisantika.springbootstudentcrud.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.util.HashSet;
 import java.util.Set;
 
