@@ -1,12 +1,10 @@
 package com.hendisantika.springbootstudentcrud.controller;
 
 import com.hendisantika.springbootstudentcrud.repository.GuideRepository;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -22,7 +20,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * Date: 2019-02-24
  * Time: 15:30
  */
-@RunWith(SpringRunner.class)
 @WebMvcTest(GuideController.class)
 public class GuideControllerTest {
     @MockBean
